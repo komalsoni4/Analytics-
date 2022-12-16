@@ -1,13 +1,15 @@
-import React,{useEffect} from 'react';
-import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import {setProducts} from "../redux/actions/ProductAction";
+import React,{useEffect, useMemo} from 'react';
+import {  useSelector } from 'react-redux';
+import './table.css'
+
+
 const Table = () => {
   
 
-   const products=useSelector((state)=>state.allProcucts.products);
-   const renderList= products.map((product)=>{
-    const {date,app_id,clicks,impression,requests,revenue,responses}=products;
+   const products=useSelector((state)=>state.allProcucts.products.data );
+   console.log("Pr",products);
+   const renderList = products.map((product)=>{
+    const {date,app_id,clicks,impression,requests,revenue,responses}=product;
     return (
         <tr>
         <td>
@@ -25,23 +27,11 @@ const Table = () => {
     );
    });
  
-     // const products=useSelector((state)=>state);
-    const dispatch = useDispatch();
-    const fetchProducts=async()=>
-    {
-        const response=await axios.get("http://go-dev.greedygame.com/v3/dummy/report?startDate=2021-05-01&endDate=2021-05-03").catch((er)=>{
-            console.log("ERR",er);
-    });
-    dispatch(setProducts(response.data));  
-    };
-   useEffect(()=>{fetchProducts()},[]);
-   console.log("Products",products);
-
 
   return (
    
         <div>
-            <table>
+            <table >
                 <thead>
                     <tr>
                         <th>Date</th>
@@ -56,13 +46,14 @@ const Table = () => {
                         
                     </tr>
                 </thead>
-                <tbody>
+                <tbody >
 
                 </tbody>
               
                {renderList}
                 
             </table>
+
         </div>
    
   );

@@ -14,28 +14,107 @@
     .main{
       display: flex;
       height: 100vh;
+      
+     
     }
     .sidebar{
-      width:50px;
+      width:60px;
       flex-shrink: 0;
-      background-color: rgb(37, 35, 53);
+      background-color: rgb(40, 36, 71);
       height: 100%;
       overflow: auto;
     }
     .container{
-      padding: 50px 25px 50px 25px;
+      padding: 0px 25px 0px 35px;
+      position: absolute;
+     left:50px;
+      right: 0px;
+      top: 0px;
     }
     .heading{
+      padding-top: 50px;
+      padding-bottom: 0px;
       color: rgb(12, 10, 26);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       padding-bottom: 30px;
     }
-    .buttons{
+    .Topic
+    {
+      padding-bottom: 30px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    th, td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    .containerButton{
+     
+      border: 1px solid #ddd;
+      border-radius: 3px;
+      position: relative;
+      height: 20vh;
+    } 
+    .Edit {
       display: flex;
     }
-    .setting{
-      display: flex;
-      float: right;
-      
-      right: 0%;
+    .button{
+      position: relative;
     }
+    .buttons button{
+      background-color: white;
+      border: 2px solid #e7e7e7;
+      border-radius: 4px;
+      color: black;
+      padding: 10px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+.buttonS {
+ position: absolute;
+ right: 25px;
+} 
+.Command{
+  display: flex;
+}
+.Command button{
+  
+  padding: 15px 32px;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  position: absolute;
+  right:20px;
+} 
+.buttonApply {
+  background-color: #4b35ee; /* Green */
+  border: none;
+   color: white;
+   /*
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; */
+}
+.buttonClose{
+  
+  background-color: white;
+  border: 2px solid #e7e7e7;
+ color: #513cf0;
+    /* color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; */
+  
+}

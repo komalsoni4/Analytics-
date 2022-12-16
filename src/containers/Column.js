@@ -29,10 +29,3 @@ export const COLUMNS=[
         accessor:'revenue'
     }
 ]
-// const columns = () => {
-//   return (
-//     <div>columns</div>
-//   )
-// }
-
-// export default columns
